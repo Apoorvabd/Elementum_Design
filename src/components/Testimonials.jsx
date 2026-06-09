@@ -1,4 +1,5 @@
 import {Quote} from "lucide-react";
+import Yellow from '../curves/Curves.yellow';
 
 import avatar1 from "../assets/testimonials/avatar1.jpg";
 import avatar2 from "../assets/testimonials/avatar2.png";
@@ -18,16 +19,21 @@ export default function Testimonials() {
         <div className="text-center">
           <div className="relative inline-block">
             {/* Green highlight */}
-            <div className="absolute left-0 top-3 w-24 h-6 bg-[#DDEBDB] rounded-full -z-10" />
+            <div className="absolute left-0 top-2 w-28 h-12 mb-1 bg-[#DDEBDB] rounded-full -z-10" />
 
             <h2 className="text-4xl md:text-5xl font-light leading-tight text-black">
               What our customer
               <br />
               says About Us
             </h2>
+             <Yellow
+  width={380}
+  height={18}
+  className="absolute top-[78px] left-[-80px] -z-10 pl-60"
+/>   
 
             {/* Yellow underline */}
-            <div className="absolute bottom-0 right-2 w-32 h-[3px] bg-[#F5B545] rotate-[-6deg]" />
+            
           </div>
         </div>
 

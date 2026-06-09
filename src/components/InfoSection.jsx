@@ -1,3 +1,5 @@
+import Yellow from "../curves/Curves.yellow";
+import LongArrow from "../curves/LongArrow"
 const InfoSection = ({
   title,
   description,
@@ -6,12 +8,19 @@ const InfoSection = ({
 }) => {
   const TextContent = () => (
     <div>
-      <h2 className="text-3xl lg:text-5xl leading-tight font-medium gerbil-font">
+      <h2 className="text-3xl lg:text-5xl leading-tight  gerbil-font ">
         
-          Tomorrow should 
-          <br />
+          <span>
+            Tomorrow should 
+          <Yellow 
+          width={490}
+  height={28}
+  strokeWidth={7}
+  className="relative -top-[12px] -left-[120px] -z-10 "/>
+          </span>
+          
           be better than {" "}
-          <span className="bg-green-100 w-[30%] rounded-full border-20">
+          <span className="bg-green-100 w-[30%] rounded-full ">
             <span className="relative z-10">
             <area shape="" coords="" href="" alt="" />
             Today
@@ -26,9 +35,11 @@ const InfoSection = ({
       <button className="mt-10 flex items-center gap-4 group">
         <span>Read more</span>
 
-        <span className="w-28 h-[1px] bg-black group-hover:w-36 transition-all"></span>
-
-        →
+        
+<LongArrow width="80"
+    height="20"
+    viewBox="0 0 90 24"
+    fill="none"/>        
       </button>
     </div>
   );
@@ -64,7 +75,7 @@ const InfoSection = ({
   );
 
   return (
-    <section className=" py-24 overflow-hidden">
+    <section className=" py-24 overflow-hidden mt-16">
       <div className="max-w-7xl mx-auto px-6">
         <div
           className={`flex flex-col items-center gap-16 ${
@@ -77,6 +88,14 @@ const InfoSection = ({
             <TextContent />
             <div className="w-10 h-10 bg-red"></div>
           </div>
+          <div
+  className="absolute top-[900px] left-[45%] w-96 h-96 rounded-full"
+  style={{
+    background:
+      "radial-gradient(circle, rgba(255,120,120,0.35) 0%, rgba(255,120,120,0.35) 40%, transparent 95%)",
+    filter: "blur(60px)",
+  }}
+/>
 
           <div className="flex-1">
             <ImageContent />

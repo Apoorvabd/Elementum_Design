@@ -7,6 +7,7 @@ import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import meating1 from "../assets/meating1.jpg";
 import meating2 from "../assets/meating2.png";
+import Progress from "../components/Progress";
 
 const Home = () => {
   return (
@@ -20,12 +21,8 @@ const Home = () => {
   buttonText="Learn More"
   image={meating1}
  />      
- <InfoSection
-  reverse={true}
-  title="See how we can help you progress"
-  description="We add a layer of fearless insight and action..."
-  image={meating2}
-/>
+ <Progress  image={meating2}/>
+
  <OfferSection />
       <Testimonials />
       <Newsletter />

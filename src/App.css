@@ -1,10 +1,11 @@
 @font-face {
   font-family: "Gerbil";
   src: url("/fonts/Gerbil.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  font-weight:900;
+  font-style:inherit;
 }
 
 body {
   font-family: "Gerbil", sans-serif;
+  
 }

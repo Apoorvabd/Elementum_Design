@@ -1,9 +1,10 @@
+import Box_violet from '../curves/Box_violet';
 export default function Newsletter() {
   return (
     <section className="relative bg-[#DDEBDD] py-24 overflow-hidden">
 
       {/* Purple Shape */}
-      <div
+      {/* <div
         className="
         hidden md:block
         absolute
@@ -16,7 +17,10 @@ export default function Newsletter() {
         rounded-bl-full
         rotate-12
         "
-      />
+      /> */}
+      <Box_violet
+  className="absolute right-80 top-52 rotate-[120deg] z-0" width={160} height={80} 
+/>
 
       {/* Red Curves */}
       <div className="hidden md:block absolute left-[38%] top-0">
@@ -44,7 +48,7 @@ export default function Newsletter() {
           md:text-7xl
           font-light
           leading-none
-          text-black
+          text-black gerbil-font
           "
         >
           Subscribe to
@@ -52,7 +56,7 @@ export default function Newsletter() {
           our newsletter
         </h2>
 
-        <p className="mt-4 text-sm text-gray-700">
+        <p className="mt-4 text-lg text-gray-700">
           To make your stay special and even more memorable
         </p>
 
