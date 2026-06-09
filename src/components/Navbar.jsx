@@ -1,3 +1,5 @@
+import { HiOutlineMenuAlt4 } from "react-icons/hi";
+
 function Navbar() {
   return (
     <nav className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
@@ -14,7 +16,7 @@ function Navbar() {
       </ul>
 
       <button className="text-2xl">
-        ☰
+<HiOutlineMenuAlt4 size={30} />
       </button>
     </nav>
   );

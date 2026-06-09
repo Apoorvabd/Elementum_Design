@@ -1,4 +1,5 @@
 import Yellow from "../curves/Curves.yellow";
+import LongArrow from "../curves/LongArrow";
 import { offers } from "../data/offers";
 
 const OfferSection = () => {
@@ -95,24 +96,14 @@ const OfferSection = () => {
                 {offer.image && (
                   <img
                     src={offer.image}
-                    alt=""
-                    className="w-12 h-12 object-cover rounded-full"
+                    alt="fjfj"
+                    className="w-12 h-12 object-cover rounded-full border-4 border-zinc-900"
                   />
                 )}
               </div>
 
               {/* Arrow */}
-              <span
-                className="
-                  text-2xl md:text-6xl
-                  text-gray-500
-                  transition-all
-                  duration-300
-                  group-hover:translate-x-2
-                "
-              >
-                →
-              </span>
+              <LongArrow/>
             </div>
           ))}
         </div>

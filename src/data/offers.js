@@ -14,6 +14,6 @@ export const offers = [
     id: 3,
     smallText: "Delta faucet content, social, digital",
     title: "Piloting digital confidence",
-    img: "rectangleImage"
+    img: {rectangleImage}
   },
 ]

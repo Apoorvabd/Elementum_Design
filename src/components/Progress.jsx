@@ -110,7 +110,7 @@ const Progress = ({ image }) => {
               </span>
             </h2>
 
-            <p className="mt-8 text-gray-700 max-w-lg leading-7">
+            <p className="mt-8 text-gray-900 max-w-lg leading-7">
               We add a layer of fearless insights and action
               that allows change makers to accelerate their
               progress in areas such as brand, design,
