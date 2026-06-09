@@ -1,25 +1,29 @@
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 
 function Navbar() {
-  return (
-    <nav className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-      <h1 className="text-[25px]  gerbil-font">
-        Elementum
-      </h1>
+  const navItems = ["Home", "Studio", "Services", "Contact", "FAQs"];
 
-      <ul className="hidden md:flex gap-8 text-sm gerbil-font">
-        <li>Home</li>
-        <li>Studio</li>
-        <li>Services</li>
-        <li>Contact</li>
-        <li>FAQs</li>
+  return (
+    <nav className="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-5 sm:px-6 lg:px-8 lg:py-6">
+      <h1 className="gerbil-font text-2xl sm:text-3xl">Elementum</h1>
+
+      <ul className="gerbil-font hidden items-center gap-8 text-sm md:flex">
+        {navItems.map((item) => (
+          <li key={item} className="cursor-pointer transition-colors hover:text-gray-500">
+            {item}
+          </li>
+        ))}
       </ul>
 
-      <button className="text-2xl">
-<HiOutlineMenuAlt4 size={30} />
+      <button
+        type="button"
+        className="inline-flex items-center justify-center text-2xl md:hidden"
+        aria-label="Open menu"
+      >
+        <HiOutlineMenuAlt4 size={30} />
       </button>
     </nav>
   );
-};
+}
 
 export default Navbar;

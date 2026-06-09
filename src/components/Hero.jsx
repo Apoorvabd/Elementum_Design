@@ -1,104 +1,82 @@
-import p1 from '../assets/p1.jpg';
-import p2 from '../assets/p2.jpg';
-import p3 from '../assets/p3.jpg';
-import p4 from '../assets/p4.jpg';
-import p5 from '../assets/p5.jpg';
-import p6 from '../assets/p6.jpg';
-import p8 from '../assets/p8.jpg';
-import p9 from '../assets/p9.jpg';
-import Box_violet from '../curves/Box_violet';
-import Curves from '../curves/Curves.side';
-import Yellow from '../curves/Curves.yellow';
+import p1 from "../assets/p1.jpg";
+import p2 from "../assets/p2.jpg";
+import p3 from "../assets/p3.jpg";
+import p4 from "../assets/p4.jpg";
+import p5 from "../assets/p5.jpg";
+import p6 from "../assets/p6.jpg";
+import p8 from "../assets/p8.jpg";
+import p9 from "../assets/p9.jpg";
+import Box_violet from "../curves/Box_violet";
+import Curves from "../curves/Curves.side";
+import Yellow from "../curves/Curves.yellow";
+import SectionContainer from "./SectionContainer";
 
 const people = [
-  { img: p9, className: "left-0 top-[75%] " },
-
-  { img: p8, className: "left-[10%] top-[55%]" },
-
-  { img: p1, className: "left-[27%] top-[27%]" },
-
-  { img: p2, className: "left-[34%] top-[90%]" },
-
-  { img: p3, className: "left-[50%] top-[40%]" },
-
-  { img: p4, className: "left-[60%] top-[75%]" },
-
-  { img: p5, className: "left-[80%] top-[27%]" },
-
-  { img: p6, className: "left-[94%] top-[71%]" },
+  { img: p9, position: "lg:left-[0%] lg:top-[60%]" },
+  { img: p8, position: "lg:left-[10%] lg:top-[32%]" },
+  { img: p1, position: "lg:left-[27%] lg:top-[6%]" },
+  { img: p2, position: "lg:left-[34%] lg:top-[75%]" },
+  { img: p3, position: "lg:left-[50%] lg:top-[24%]" },
+  { img: p4, position: "lg:left-[60%] lg:top-[58%]" },
+  { img: p5, position: "lg:left-[80%] lg:top-[8%]" },
+  { img: p6, position: "lg:left-[110%] lg:top-[55%]" },
 ];
-
 
 const Hero = () => {
   return (
-    <section className="relative max-w-7xl mx-auto mt-20 pb-20">
+    <SectionContainer className="pt-12 pb-16 sm:pt-16 lg:pt-20 lg:pb-20">
       <Curves />
 
-      {/* Background Blur */}
-      <div className="absolute top-20 left-20 w-52  bg-pink-900 rounded-full blur-3xl opacity-30"></div>
+      <div className="pointer-events-none absolute left-[8%] top-[16%] h-28 w-28 rounded-full bg-pink-900 opacity-30 blur-3xl sm:h-40 sm:w-40 lg:h-52 lg:w-52" />
+      <div className="pointer-events-none absolute bottom-[18%] right-[8%] h-28 w-28 rounded-full bg-green-200 opacity-30 blur-3xl sm:h-40 sm:w-40 lg:h-52 lg:w-52" />
 
-      <div className="absolute bottom-10 right-20 w-52  bg-green-200 rounded-full blur-3xl opacity-30"></div>
+      <div className="relative z-10 mx-auto max-w-6xl text-center">
+        <Box_violet className="absolute right-0 top-[58%] z-0 hidden h-20 w-10 -translate-y-1/2 rotate-[28deg] md:block lg:right-[2%] lg:h-24 lg:w-12 xl:right-[0%] xl:left-[110%]" />
 
-      <div className="relative z-10 ">
-
-        <div className="text-center gerbil-font leading-none text-3xl md:text-[80px]  z-10 w-[1100px] p-9">
-         <div className="mb-[14px]">
-           The{" "} 
-          <span className=" px-4 rounded-full z-10">
-            thinkers
-<Yellow
-  width={760}
-  height={40}
-  className="absolute top-[90px] left-[200px] -z-10"
-/>           
-          </span>{" "}
-          and
-           
+        <h1 className="gerbil-font mx-auto max-w-6xl text-[1.35rem] leading-[0.98] min-[360px]:text-2xl min-[430px]:text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+          <span className="relative inline-block whitespace-nowrap">
+            The thinkers
+            <Yellow
+              className="absolute left-64 top-[76%] -z-10 hidden 
+              h-[0.39em] w-[5.9em] sm:block"
+            />
+          </span>
+          <span className="whitespace-nowrap"> and</span>
           <br />
-         </div>
-
-          doers were{" "}ch
-          <span className="bg-pink-200  px-4 rounded-full inline-block leading-[0.85]">
-            <span className="relative z-10 ">
-            anging
+          <span className="inline-flex items-baseline justify-center whitespace-nowrap">
+            doers were ch
+            <span className="inline-block rounded-full bg-pink-200 px-2 leading-[0.9] sm:px-4 sm:leading-[0.85]">
+              anging
             </span>
           </span>
           <br />
-
-          the{" "}
-          <span className="bg-green-100 px-4 mx-2 rounded-full leading-[0.85] inline-block">
-            status 
+          <span className="whitespace-nowrap">the </span>
+          <span className="inline-block rounded-full bg-green-100 px-2 leading-[0.9] sm:px-4 sm:leading-[0.85]">
+            status
           </span>{" "}
-          Quo with
-          
-        </div>
+          <span className="whitespace-nowrap">Quo with</span>
+        </h1>
 
-        <p className="text-center text-lg font-semibold  text-gray-500 max-w-2xl mx-auto mt-8">
-          We are a team of strategists, designers,
-          communicators, researchers. Together,
-          we believe progress only happens when
-          you refuse to play things safe.
+        <p className="mx-auto mt-6 max-w-2xl text-base font-semibold leading-7 text-gray-500 sm:mt-8 sm:text-lg">
+          We are a team of strategists, designers, communicators, researchers.
+          Together, we believe progress only happens when you refuse to play
+          things safe.
         </p>
-
       </div>
 
-<div className="relative max-w-8xl h-[250px]">
-  {people.map((person, index) => (
-    <img
-      key={index}
-      src={person.img}
-      alt=""
-      className={`absolute ${person.className} w-44 h-44 pr-2 rounded-full object-cover shadow-lg border-4 border-white`}
-    />
-  ))}
-</div>
-<Box_violet
-  className="absolute right-0 top-64 rotate-[300deg] z-0"
-/>
-
-
-    </section>
-    
+      <div className="relative z-10 mx-auto mt-10 grid max-w-xl grid-cols-4 gap-3 sm:mt-12 sm:gap-4 lg:h-80 lg:max-w-none lg:block">
+        {people.map((person, index) => (
+          <img
+            key={person.img}
+            src={person.img}
+            alt=""
+            className={`aspect-square w-full rounded-full border-4 border-white object-cover shadow-lg sm:mx-auto sm:max-w-28 lg:absolute lg:w-44 lg:max-w-none ${person.position} ${
+              index === 7 ? "lg:-translate-x-full" : ""
+            }`}
+          />
+        ))}
+      </div>
+    </SectionContainer>
   );
 };
 

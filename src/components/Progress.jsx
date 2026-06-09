@@ -1,135 +1,76 @@
-import Yellow from '../curves/Curves.yellow';
-import LongArrow from "../curves/LongArrow"
+import Yellow from "../curves/Curves.yellow";
+import LongArrow from "../curves/LongArrow";
+import SectionContainer from "./SectionContainer";
+
 const Progress = ({ image }) => {
   return (
-    <section className="relative py-24 overflow-hidden">
-      {/* Top red curve */}
-     <svg
-  className="absolute top-0 left-0 w-full pointer-events-none"
-  height="180"
-  viewBox="0 0 1440 180"
-  fill="none"
->
-  {/* Shadow */}
-  <path
-    d="M350 120C500 20 700 220 900 80C1050 -20 1180 40 1440 0"
-    stroke="#8F8F8F"
-    strokeWidth="5"
-    fill="none"
-    opacity="0.25"
-    transform="translate(3,8)"
-    strokeLinecap="round"
-  />
+    <SectionContainer className="py-16 sm:py-20 lg:py-24">
+      <svg
+        className="pointer-events-none absolute left-0 top-0 h-24 w-full sm:h-32 lg:h-44"
+        viewBox="0 0 1440 180"
+        fill="none"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M350 120C500 20 700 220 900 80C1050 -20 1180 40 1440 0"
+          stroke="#8F8F8F"
+          strokeWidth="5"
+          fill="none"
+          opacity="0.25"
+          transform="translate(3,8)"
+          strokeLinecap="round"
+        />
+        <path
+          d="M350 120C500 20 700 220 900 80C1050 -20 1180 40 1440 0"
+          stroke="#FF6B6B"
+          strokeWidth="3"
+          fill="none"
+          strokeLinecap="round"
+        />
+      </svg>
 
-  {/* Main Curve */}
-  <path
-    d="M350 120C500 20 700 220 900 80C1050 -20 1180 40 1440 0"
-    stroke="#FF6B6B"
-    strokeWidth="3"
-    fill="none"
-    strokeLinecap="round"
-  />
-</svg>
+      <div className="grid items-center gap-12 pt-8 lg:grid-cols-2 lg:gap-20 lg:pt-12">
+        <div className="relative flex justify-center">
+          <div className="absolute left-[8%] top-[8%] hidden h-0 w-0 -rotate-8 border-b-[72px] border-l-[42px] border-r-[42px] border-b-[#FF6B6B] border-l-transparent border-r-transparent sm:block lg:border-b-[95px] lg:border-l-[55px] lg:border-r-[55px]" />
+          <div className="absolute bottom-[4%] right-[8%] z-20 h-0 w-0 border-b-[86px] border-l-[48px] border-r-[48px] border-b-[#FF6B6B] border-l-transparent border-r-transparent sm:border-b-[110px] sm:border-l-[60px] sm:border-r-[60px]" />
 
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col lg:flex-row items-center gap-20">
+          <img
+            src={image}
+            alt=""
+            className="relative z-10 aspect-square w-full max-w-xs rounded-full object-cover sm:max-w-sm lg:max-w-md"
+          />
+        </div>
 
-          {/* LEFT IMAGE */}
-          <div className="flex-1 relative flex justify-center">
+        <div className="relative z-10 text-center lg:text-left">
+          <h2 className="gerbil-font text-4xl font-light leading-none sm:text-5xl lg:text-6xl">
+            <span className="inline-block rounded-full bg-[#DDE8D4] px-3">
+              See
+            </span>{" "}
+            how we can
+            <br />
+            help you{" "}
+            <span className="relative inline-block">
+              progress
+              <Yellow
+                className="absolute left-0 top-[74%] -z-10 h-[0.3em] w-full"
+              />
+            </span>
+          </h2>
 
-            {/* Top triangle */}
-            <div
-              className="
-                absolute
-                left-10
-                top-10
-                w-0
-                h-0
-                border-l-[55px]
-                border-r-[55px]
-                border-b-[95px]
-                border-l-transparent
-                border-r-transparent
-                border-b-[#FF6B6B]
-                -rotate-8
-              "
-            />
+          <p className="mx-auto mt-6 max-w-lg leading-7 text-gray-900 sm:mt-8 lg:mx-0">
+            We add a layer of fearless insights and action that allows change
+            makers to accelerate their progress in areas such as brand, design,
+            digital, comms and social research.
+          </p>
 
-            {/* Bottom triangle */}
-            <div
-              className="
-                absolute
-                bottom-2 
-                right-10
-                w-0
-                h-0
-                border-l-[65px]
-                border-r-[65px]
-                border-b-[120px]
-                border-l-transparent
-                border-r-transparent
-                border-b-[#FF6B6B]
-                z-20
-              "
-            />
-
-            <img
-              src={image}
-              alt=""
-              className="
-                relative
-                z-10
-                w-[420px]
-                h-[420px]
-                object-cover
-                rounded-full
-              "
-            />
-          </div>
-
-          {/* RIGHT CONTENT */}
-          <div className="flex-1">
-
-            <h2 className="text-4xl md:text-5xl leading-none gerbil-font font-light z-10 p-3">
-
-              <span className="bg-[#DDE8D4] px-3 rounded-full">
-                See
-              </span>{" "}
-              how we can
-              <br />
-              help you{" "}
-
-              <span className="relative inline-block">
-                progress
-
-                <Yellow
-  width={550}
-  height={24}
-  className="absolute top-[35px] left-[-270px] -z-10 pl-60"
-/>   
-              </span>
-            </h2>
-
-            <p className="mt-8 text-gray-900 max-w-lg leading-7">
-              We add a layer of fearless insights and action
-              that allows change makers to accelerate their
-              progress in areas such as brand, design,
-              digital, comms and social research.
-            </p>
-
-            <button className="mt-10 flex items-center gap-4 group">
-              <span>Read more</span>
-
-              <LongArrow width="80"
-    height="20"
-    viewBox="0 0 90 24"
-    fill="none"/> 
-            </button>
-          </div>
-
+          <button className="group mx-auto mt-8 flex items-center gap-4 lg:mx-0 lg:mt-10">
+            <span>Read more</span>
+            <LongArrow width={80} height={20} viewBox="0 0 90 24" />
+          </button>
         </div>
       </div>
-    </section>
+    </SectionContainer>
   );
 };
 

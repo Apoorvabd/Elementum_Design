@@ -1,5 +1,5 @@
-import {Quote} from "lucide-react";
-import Yellow from '../curves/Curves.yellow';
+import Yellow from "../curves/Curves.yellow";
+import SectionContainer from "./SectionContainer";
 
 import avatar1 from "../assets/testimonials/avatar1.jpg";
 import avatar2 from "../assets/testimonials/avatar2.png";
@@ -10,117 +10,76 @@ import avatar6 from "../assets/testimonials/avatar6.jpg";
 import avatar7 from "../assets/testimonials/avatar7.jpg";
 import avatar8 from "../assets/testimonials/avatar8.png";
 
+const avatars = [
+  { src: avatar1, className: "left-[8%] top-[2%] h-20 w-20" },
+  { src: avatar2, className: "left-[2%] top-[32%] h-12 w-12" },
+  { src: avatar3, className: "left-[10%] top-[52%] h-28 w-28" },
+  { src: avatar4, className: "left-[2%] top-[72%] h-20 w-20" },
+  { src: avatar5, className: "right-[10%] top-[2%] h-20 w-20" },
+  { src: avatar6, className: "right-[25%] top-[14%] h-16 w-16" },
+  { src: avatar7, className: "right-[18%] top-[38%] h-12 w-12" },
+  { src: avatar8, className: "right-[2%] top-[58%] h-36 w-36 lg:h-44 lg:w-44" },
+];
+
 export default function Testimonials() {
   return (
-    <section className="  overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 relative min-h-[450px]  rounded-[32px]">
+    <SectionContainer className="py-16 sm:py-20 lg:py-24" innerClassName="relative min-h-[420px]">
+      <div className="text-center">
+        <div className="relative inline-block">
+          <div className="absolute left-0 top-2 -z-10 h-10 w-24 rounded-full bg-[#DDEBDB] sm:h-12 sm:w-28" />
 
-        {/* ===== Heading ===== */}
-        <div className="text-center">
-          <div className="relative inline-block">
-            {/* Green highlight */}
-            <div className="absolute left-0 top-2 w-28 h-12 mb-1 bg-[#DDEBDB] rounded-full -z-10" />
+          <h2 className="text-4xl font-light leading-tight text-black sm:text-5xl">
+            What our customer
+            <br />
+            says About Us
+          </h2>
 
-            <h2 className="text-4xl md:text-5xl font-light leading-tight text-black">
-              What our customer
-              <br />
-              says About Us
-            </h2>
-             <Yellow
-  width={380}
-  height={18}
-  className="absolute top-[78px] left-[-80px] -z-10 pl-60"
-/>   
-
-            {/* Yellow underline */}
-            
-          </div>
-        </div>
-
-        {/* ===== Floating Avatars ===== */}
-
-        {/* top left medium */}
-        <img
-          src={avatar1}
-          alt="customer"
-          className="hidden md:block absolute left-16 top-0 w-20 h-20rounded-full object-cover"
-        />
-
-        {/* left center big */}
-        <img
-          src={avatar3}
-          alt="customer"
-          className="hidden md:block absolute left-20 top-52 w-28 h-28 rounded-full object-cover"
-        />
-
-        {/* left bottom small */}
-        <img
-          src={avatar2}
-          alt="customer"
-          className="hidden md:block absolute left-0 top-[130px] w-12 h-12 rounded-full object-cover"
-        />
-
-        {/* left bottom medium */}
-        <img
-          src={avatar4}
-          alt="customer"
-          className="hidden md:block absolute left-0 top-[280px] w-20 h-20 rounded-full object-cover"
-        />
-
-        {/* top right medium */}
-        <img
-          src={avatar5}
-          alt="customer"
-          className="hidden md:block absolute right-20 top-0 w-20 h-20 rounded-full object-cover"
-        />
-
-        {/* top right small */}
-        <img
-          src={avatar6}
-          alt="customer"
-          className="hidden md:block absolute right-52 top-12 w-16 h-16 rounded-full object-cover"
-        />
-
-        {/* right center small */}
-        <img
-          src={avatar7}
-          alt="customer"
-          className="hidden md:block absolute right-36 top-36 w-12 h-12 rounded-full object-cover"
-        />
-
-        {/* right big */}
-        <img
-          src={avatar8}
-          alt="customer"
-          className="hidden md:block absolute  right-0 top-52 w-44 h-44 rounded-full object-cover"
-        />
-
-        {/* ===== Testimonial Card ===== */}
-
-        <div className="flex justify-center mt-16">
-          <div className="relative bg-[#EEF2EE] rounded-[32px] max-w-[650px] px-10 py-10">
-
-            {/* Quote Top */}
-            <span className="absolute left-6 top-4 text-7xl text-[#CFCFCF] leading-none">
-              ❝
-            </span>
-
-            <p className="text-center text-[#333] text-base leading-8 px-6">
-              Elementum delivered the site within the timeline as they
-              requested. In the end, the client found a 50% increase in
-              traffic within days since its launch. They also had an
-              impressive ability to use technologies that the company
-              hasn’t used, which have also proved to be easy to use
-              and reliable.
-            </p>
-
-            {/* Quote Bottom */}
-            <span className="absolute right-6 bottom-0 text-7xl text-[#CFCFCF] leading-none">
-              ❞
-            </span>
-          </div>
+          <Yellow
+            strokeWidth={7}
+            className="absolute left-[18%] top-[78%] -z-10 h-5 w-[64%]"
+          />
         </div>
       </div>
-    </section>
+
+      <div className="mx-auto mt-10 grid max-w-xs grid-cols-4 gap-3 sm:max-w-md md:hidden">
+        {avatars.slice(0, 8).map((avatar) => (
+          <img
+            key={avatar.src}
+            src={avatar.src}
+            alt=""
+            className="aspect-square w-full rounded-full object-cover"
+          />
+        ))}
+      </div>
+
+      {avatars.map((avatar) => (
+        <img
+          key={avatar.src}
+          src={avatar.src}
+          alt=""
+          className={`absolute hidden rounded-full object-cover md:block ${avatar.className}`}
+        />
+      ))}
+
+      <div className="relative z-10 mt-10 flex justify-center md:mt-16">
+        <div className="relative w-full max-w-2xl rounded-[32px] bg-[#EEF2EE] px-6 py-9 sm:px-10 sm:py-10">
+          <span className="absolute left-4 top-2 text-6xl leading-none text-[#CFCFCF] sm:left-6 sm:top-4 sm:text-7xl">
+            &ldquo;
+          </span>
+
+          <p className="px-2 text-center text-base leading-8 text-[#333] sm:px-6">
+            Elementum delivered the site within the timeline as they requested.
+            In the end, the client found a 50% increase in traffic within days
+            since its launch. They also had an impressive ability to use
+            technologies that the company has not used, which have also proved
+            to be easy to use and reliable.
+          </p>
+
+          <span className="absolute bottom-0 right-4 text-6xl leading-none text-[#CFCFCF] sm:right-6 sm:text-7xl">
+            &rdquo;
+          </span>
+        </div>
+      </div>
+    </SectionContainer>
   );
 }

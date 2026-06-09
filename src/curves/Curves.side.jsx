@@ -2,9 +2,10 @@ const Curves = () => {
   return (
     <svg
       viewBox="20 -10 140 500"
-      className="w-32 ml-1 absolute top-80 left-0 h-72 pointer-events-none z-0 "
+      className="pointer-events-none absolute left-0 top-[58%] z-0 hidden h-52 w-20 -translate-y-1/2 sm:block lg:h-72 lg:w-32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
     >
      
       {/* Pink Curve */}
