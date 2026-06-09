@@ -17,7 +17,7 @@ function Navbar() {
 
       <button
         type="button"
-        className="inline-flex items-center justify-center text-2xl md:hidden"
+        className="inline-flex items-center justify-center text-2xl "
         aria-label="Open menu"
       >
         <HiOutlineMenuAlt4 size={30} />

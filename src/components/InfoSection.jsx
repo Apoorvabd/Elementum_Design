@@ -8,21 +8,26 @@ const InfoSection = ({ title, description, image, reverse = false }) => {
 
   return (
     <SectionContainer className="py-16 sm:py-20 lg:py-24">
+      {/* Glowing Red/Pink Blur - Moved from Hero to InfoSection Top */}
+      <div className="pointer-events-none absolute left-[48%] top-[18%] h-64 w-64 rounded-full bg-red-300 opacity-90 blur-[60px] sm:h-96 sm:w-96 lg:h-[150px] lg:w-[150px] -z-30 " />
+
       <div
         className={`grid items-center gap-12 lg:grid-cols-2 lg:gap-16 ${
           reverse ? "lg:[&>*:first-child]:order-2" : ""
         }`}
       >
         <div className={`relative z-10 text-center lg:text-left ${contentOrder}`}>
-          <h2 className="gerbil-font mx-auto max-w-2xl text-4xl leading-tight sm:text-5xl lg:mx-0 lg:text-6xl">
-            <span className="relative inline-block">
+          <h2 className="gerbil-font mx-auto max-w-2xl text-4xl leading-tight sm:text-5xl lg:mx-0 lg:text-5xl">
+            <span className="relative inline-block pb-2">
               Tomorrow should
               <Yellow
-                strokeWidth={7}
-                className="absolute left-0 top-[72%] -z-10 h-[0.34em] w-full"
+                strokeWidth={9}
+                className="absolute left-1 top-[68%] -z-10 h-[0.39em] 
+                w-[7.2em] "
               />
             </span>{" "}
-            be better than{" "}
+            
+             better than{" "}
             <span className="inline-block rounded-full bg-green-100 px-3 leading-[0.9]">
               Today
             </span>
@@ -40,13 +45,6 @@ const InfoSection = ({ title, description, image, reverse = false }) => {
 
         <div className={`relative flex justify-center ${imageOrder}`}>
           <div className="absolute right-[18%] top-[10%] z-0 h-16 w-16 rotate-12 bg-[#FF6B6B] sm:h-24 sm:w-24 lg:h-28 lg:w-28" />
-          <div
-            className="absolute left-[18%] top-[18%] h-48 w-48 rounded-full opacity-70 blur-3xl sm:h-72 sm:w-72"
-            style={{
-              background:
-                "radial-gradient(circle, rgba(255,120,120,0.35) 0%, rgba(255,120,120,0.35) 40%, transparent 95%)",
-            }}
-          />
 
           <img
             src={image}

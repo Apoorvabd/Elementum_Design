@@ -43,7 +43,7 @@ const Progress = ({ image }) => {
         </div>
 
         <div className="relative z-10 text-center lg:text-left">
-          <h2 className="gerbil-font text-4xl font-light leading-none sm:text-5xl lg:text-6xl">
+          <h2 className="gerbil-font text-4xl font-light leading-none sm:text-5xl lg:text-5xl">
             <span className="inline-block rounded-full bg-[#DDE8D4] px-3">
               See
             </span>{" "}
@@ -53,7 +53,8 @@ const Progress = ({ image }) => {
             <span className="relative inline-block">
               progress
               <Yellow
-                className="absolute left-0 top-[74%] -z-10 h-[0.3em] w-full"
+                className="absolute left-10 top-[74%] -z-10 h-[0.49em] 
+                w-[9.3em]"
               />
             </span>
           </h2>

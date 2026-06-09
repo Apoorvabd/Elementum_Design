@@ -27,7 +27,6 @@ const Hero = () => {
     <SectionContainer className="pt-12 pb-16 sm:pt-16 lg:pt-20 lg:pb-20">
       <Curves />
 
-      <div className="pointer-events-none absolute left-[8%] top-[16%] h-28 w-28 rounded-full bg-pink-900 opacity-30 blur-3xl sm:h-40 sm:w-40 lg:h-52 lg:w-52" />
       <div className="pointer-events-none absolute bottom-[18%] right-[8%] h-28 w-28 rounded-full bg-green-200 opacity-30 blur-3xl sm:h-40 sm:w-40 lg:h-52 lg:w-52" />
 
       <div className="relative z-10 mx-auto max-w-6xl text-center">

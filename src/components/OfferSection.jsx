@@ -17,8 +17,8 @@ const OfferSection = () => {
         </h2>
 
         <Yellow
-          strokeWidth={7}
-          className="absolute left-0 top-[58%] -z-0 hidden h-6 w-64 sm:block sm:w-80 md:w-96 lg:max-w-md"
+          strokeWidth={9}
+          className="absolute left-0 top-[88%] -z-0 hidden h-6 w-64 sm:block sm:w-80 md:w-60 lg:max-w-md"
         />
 
         <div className="pointer-events-none absolute right-0 top-0 hidden w-[42%] max-w-2xl md:block">
