@@ -62,7 +62,7 @@ const OfferSection = () => {
                 <img
                   src={offer.image}
                   alt=""
-                  className="hidden aspect-square w-12 shrink-0 rounded-full border-4 border-zinc-900 object-cover sm:block"
+                  className="hidden aspect-square w-20 shrink-0 rounded-full border-2 border-zinc-900 object-cover sm:block md:relative md:right-60 -z-20 "
                 />
               )}
             </div>

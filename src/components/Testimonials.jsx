@@ -11,14 +11,14 @@ import avatar7 from "../assets/testimonials/avatar7.jpg";
 import avatar8 from "../assets/testimonials/avatar8.png";
 
 const avatars = [
-  { src: avatar1, className: "left-[10%] top-[12%] h-28 w-28" },
-  { src: avatar2, className: "left-[3%] top-[42%] h-14 w-14" },
-  { src: avatar3, className: "left-[11%] top-[45%] h-44 w-44" },
-  { src: avatar4, className: "left-[2%] top-[74%] h-24 w-24" },
-  { src: avatar5, className: "right-[6%] top-[12%] h-32 w-32" },
-  { src: avatar6, className: "right-[22%] top-[24%] h-20 w-20" },
-  { src: avatar7, className: "right-[18%] top-[42%] h-24 w-24" },
-  { src: avatar8, className: "right-[4%] top-[58%] h-56 w-56 lg:h-64 lg:w-64" },
+  { src: avatar1, className: "left-[4%] top-[10%] h-24 w-24" },
+  { src: avatar2, className: "left-[0%] top-[36%] h-14 w-14" },
+  { src: avatar3, className: "left-[7%] top-[40%] h-44 w-44" },
+  { src: avatar4, className: "left-[2%] top-[70%] h-24 w-24" },
+  { src: avatar5, className: "right-[2%] top-[5%] h-32 w-32" },
+  { src: avatar6, className: "right-[14%] top-[16%] h-20 w-20" },
+  { src: avatar7, className: "right-[12%] top-[36%] h-24 w-24" },
+  { src: avatar8, className: "right-[0%] top-[52%] h-56 w-56 lg:h-64 lg:w-64" },
 ];
 
 export default function Testimonials() {

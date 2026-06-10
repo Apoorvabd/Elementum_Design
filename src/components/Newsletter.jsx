@@ -4,7 +4,7 @@ export default function Newsletter() {
   return (
     <section className="relative overflow-hidden bg-[#DDEBDD] py-16 sm:py-20 lg:py-24">
       <Box_violet
-        className="absolute right-[6%] top-[54%] z-0 h-20 w-10 rotate-[120deg] sm:right-[12%] sm:top-[46%] sm:h-24 sm:w-12 lg:right-[22%]"
+        className="absolute right-[6%] top-[54%] z-0 h-20 w-10 rotate-[220deg] sm:right-[12%] sm:top-[46%] sm:h-24 sm:w-12 lg:right-[22%]"
       />
 
       <div className="pointer-events-none absolute left-[38%] top-0 hidden md:block">
